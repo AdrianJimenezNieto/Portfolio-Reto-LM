@@ -16,7 +16,13 @@
 </head>
 
 <body>
-  <div class="container">
+  <div class="container" id="up">
+    <a href="#up" id="scroll-up">
+      <svg id="scroll-up" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+        <path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8.009 8.009 0 0 1-8 8z"/>
+        <path d="M12 12.586 8.707 9.293l-1.414 1.414L12 15.414l4.707-4.707-1.414-1.414L12 12.586z"/>
+      </svg>
+    </a>
     <header>
       <section id="hero">
         <div class="presentacion">
@@ -37,23 +43,147 @@
         </div>
       </section>
     </header>
+
     <main>
       <section id="perfil">
-        <h2>Saludos! 👋</h2>
+        <h2>👋 Saludos!</h2>
         <p>
-          Bienvenidas y bienvenidos a mi CV/Portfolio, soy Adrián, un apasionado de la montaña
+          Bienvenidas y bienvenidos a mi CV/Portfolio, soy Adrián Jiménez, un apasionado de la montaña
           y la tecnología. Actualmente me encuentro en mi periplo por convertirme
-          en un gran desarrollador web, aunque ya cuento con algo de experiencia
-          en este campo, así como en el campo de la IA y el Machine Learning. Aquí 
+          en un gran <span class="negrita">desarrollador web</span>, aunque ya cuento con algo de experiencia
+          en este campo, así como en el campo de la <span class="negrita">IA y el Machine Learning</span>. Aquí 
           encontraréis datos sobre mí así como mi experiencia laboral, estudios,
           habilidades, y proyectos. ¡Disfruten!😄
         </p>
       </section>
-      <section id="experiencia"></section>
-      <section id="educacion"></section>
-      <section id="habilidades"></section>
-      <section id="projects"></section>
-      <section id="contacto"></section>
+
+      <section id="experiencia">
+        <h2>🛠️ Experiencia laboral</h2>
+        <div class="exp-tic">
+          <h3>Experiencia en el sector TIC</h3>
+          <ul>
+            <li>
+              <p><span>Prácticas Desarrollador IA/ML</span><span>Septiembre 2023 - Febrero 2024</span></p>
+              <p>Overstande Intelligence</p>
+              <ul>
+                <li><p>Desarrollo de modelos ML.</p></li>
+                <li><p>Desarrollo de APIs para modelos de ML.</p></li>
+                <li><p>Análisis de datos.</p></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="exp-no-tic">
+          <h3>Experiencia en otros sectores</h3>
+          <ul>
+            <li>
+              <p><span>Gasolinero</span><span>Septiembre 2024 - Actualidad</span></p>
+              <p>ES JL Vidallé y CIA - Repsol (Parzán)</p>
+            </li>
+            <li>
+              <p><span>Camarero de sala</span><span>Julio 2024 - Septiembre 2024</span></p>
+              <p>Parador de Turismo Nacional de Bielsa (Bielsa)</p>
+            </li>
+            <li>
+              <p><span>Vendedor de Montaña/Dependiente</span><span>Noviembre 2022 - Mayo 2024</span></p>
+              <p>Barrabés ESqui y Montaña (Zaragoza)</p>
+            </li>
+            <li>
+              <p><span>Camarero de Sala/Bartender</span><span>Junio 2021 - Octubre 2021</span></p>
+              <p>Tagliatella Emperador Carlos V (Zaragoza)</p>
+            </li>
+            <li>
+              <p><span>Operario Logística/Mozo de Almacén</span><span>Semptiembre 2020 y Abril 2021</span></p>
+              <p>Plataforma Europa, Inditex (Zaragoza)</p>
+            </li>
+            <li>
+              <p><span>Departamento Control de Calidad</span><span>Junio 2016 - Septiembre 2017</span></p>
+              <p>Dimática S.A. (Monzón)</p>
+            </li>
+            <li>
+              <p><span>Ayudante de Fotógrafo</span><span>Veranos de 2010 - 2013</span></p>
+              <p>Raluy Fotografía (Monzón)</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="educacion">
+        <h2>📚 Educación Académica</h2>
+        <ul>
+          <li>
+            <p>
+              <span>FP Superior de Desarrollo de Aplicaciones WEB</span>
+              <span>Cesur Formación (Telemático)</span>
+              <span>Cursando Actualmente</span>
+            </p>
+          </li>
+          <li>
+            <p>
+              <span>Ingeniería Telecomunicaciones</span>
+              <span>Unizar - Eina (Zaragoza)</span>
+              <span>2018 - 2021 (Incompleta)</span>
+            </p>
+          </li>
+          <li>
+            <p>
+              <span>Bachillerato Tecnológico</span>
+              <span>IES Jose Mor de Fuentes (Monzon)</span>
+              <span>2011 - 2013</span>
+            </p>
+          </li>
+        </ul>
+      </section>
+
+      <section id="habilidades">
+        <h2>💡 Skills</h2>
+        <div class="skills-container">
+          <div>
+            <h3>Lenguajes</h3>
+            <ul>
+              <li>HTML (Medio)</li>
+              <li>CSS (Medio)</li>
+              <li>Python (Medio)</li>
+              <li>JavaScript (Aprendiendo)</li>
+              <li>Java (Aprendiendo)</li>
+              <li>SQL (Aprendiendo)</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3>Frameworks y Librerías</h3>
+            <li>Pandas (Medio)</li>
+            <li>ScikitLearn (Medio)</li>
+            <li>TensorFlow (Básico)</li>
+            <li>Django</li>
+            <li>React (Aprendiendo)</li>
+            <li>Node.js (Aprendiendo)</li>
+            </li>
+          </div>
+          
+          <div>
+            <h3>Soft Skills</h3>
+            <ul>
+              <li>Trabajo en equipo</li>
+              <li>Resolución de problemas</li>
+              <li>Comunicación efectiva, empática y asertiva</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="proyectos">
+        <h2>📂 Proyectos</h2>
+        <div class="proyectos-container">
+          <div>
+            <h3></h3>
+          </div>
+        </div>
+      </section>
+
+      <section id="contacto">
+        <h2>📧 Contacto</h2>
+      </section>
     </main>
     <footer>
       

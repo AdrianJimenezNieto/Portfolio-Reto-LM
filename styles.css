@@ -3,16 +3,20 @@ html, *, *::before, *::after {
   padding: 0;
   font-size: 16px;
   scroll-behavior: smooth;
-  outline: 1px solid red;
+  /* La siguiente linea la uso para ver lo que ocupan las cajas en el body */
+  /* outline: 1px solid red; */
   box-sizing: border-box;
 } 
+
+
+/* ESTILOS GENERALES */
 
 body {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  width: 100vw;
-  line-height: 1.5;
-  background: linear-gradient(to right, #8e9eaba2, #eef2f3); 
+  background: linear-gradient(to right, #8e9eaba2, #eef2f3);
+  overflow-x: hidden;
+  width: 100%;
 }
 
 h1, h2, h3, h4 {
@@ -29,18 +33,42 @@ h2 {
   font-size: 2rem;
   line-height: 1.3;
   letter-spacing: .2rem;
+  text-transform: uppercase;
 }
 
 p {
   font-size: 1rem;
-  line-height: 1.6;
+  line-height: 2;
+}
+
+.negrita {
+  font-weight: 700;
 }
 
 .container {
   width: 90%;
   max-width: 1200px;
-  margin: 0 auto; /* Para centrar el contenido de la web */
+  margin: 0 auto;
   padding: 4rem;
+}
+
+#scroll-up {
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+
+  animation: bouncing 2s ease-in-out infinite;
+}
+
+#scroll-up svg {
+  scale: 1.5;
+  rotate: 180deg;
+}
+
+@keyframes bouncing {
+  0% { transform: translateY(0) }
+  50% { transform: translateY(-10px) }
+  100% { transform: translateY(0) }
 }
 
 
@@ -48,15 +76,12 @@ p {
 
 
 header {
+  margin: 5rem 0 10rem 0;
   width: 100%;
-  margin-bottom: 20rem;
 }
 
 #hero {
   width: 100%;
-  padding: 1rem;
-  display: grid;
-  place-content: center;
 }
 
 .presentacion {
@@ -69,7 +94,7 @@ header {
 
 .presentacion img {
   aspect-ratio: 1 / 1;
-  height: 300px;
+  height: 10rem;
   border-radius: 50%;
   box-shadow: 0 0 5px black;
   opacity: 0;
@@ -158,6 +183,7 @@ header {
   justify-content: space-evenly; 
   align-items: center;
   gap: 2rem;
+  flex-wrap: wrap;
   opacity: 0;
 
   animation: navegacion-load 1s ease-in-out 1s forwards;
@@ -175,19 +201,24 @@ header {
 }
 
 .navegacion a {
+  width: 8rem;
+  height: 4rem;
   text-decoration: none;
-  color: #777;
-  padding: .5rem;
-  border: 1px solid #777;
+  color: rgb(225, 225, 225);
+  background: linear-gradient(to right, #252525,#626262, #252525);
+  background-size: 180%;
+  background-position: right;
+  padding: .8rem;
   border-radius: 20px;
+  display: grid;
+  place-items: center;
+  text-align: center;
 
-  transition: all .3s ease-in-out;
+  transition: background-position .3s ease-in-out;
 }
 
 .navegacion a:hover {
-  border-color: #ccc;
-  color: #ccc;
-  background-color: #777;
+  background-position: left;
 }
 
 
@@ -205,7 +236,14 @@ main {
 
 /* ESTILOS PRESENTACION */
 
+section {
+  width: 100%;
+  text-align: center;
+}
 
+#perfil h2 {
+  margin-bottom: 2rem;
+}
 
 
 /* ESTILOS FOOTER */
