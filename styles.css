@@ -22,6 +22,8 @@ body {
 h1, h2, h3, h4 {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
+  text-align: center;
+  text-wrap-mode: wrap;
 }
 
 h1 {
@@ -56,23 +58,79 @@ p {
   position: fixed;
   bottom: 5%;
   right: 5%;
+  opacity: 0;
 
-  animation: bouncing 2s ease-in-out infinite;
+  animation: scroll-up-load 1s ease-in-out 1.2s forwards, bouncing 2s ease-in-out infinite;
 }
 
 #scroll-up svg {
   scale: 1.5;
   rotate: 180deg;
+  fill: #626262;
 }
 
 @keyframes bouncing {
   0% { transform: translateY(0) }
-  50% { transform: translateY(-10px) }
+  50% { transform: translateY(-30px) }
   100% { transform: translateY(0) }
+}
+
+@keyframes scroll-up-load {
+
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
 }
 
 
 /* ESTILOS HEADER */
+
+.icons-top {
+  position: fixed;
+  top: 5%;
+  right: 5%;
+  width: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  opacity: 0;
+
+  animation: icons-load 1s ease-in-out 1.2s forwards;
+}
+
+@keyframes icons-load {
+
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+}
+
+.icons-top a svg {
+  width: 2rem;
+  height: 2rem;
+  fill: #626262;
+  transition: all .3s ease-in-out;
+}
+
+.icons-top a svg:hover {
+  fill: #9e9e9e;
+  transform: translateY(-0.2rem);
+}
 
 
 header {
@@ -231,18 +289,177 @@ main {
   justify-content: space-between;
   align-items: center;
   padding: 0 5rem;
+  gap: 10rem;
 }
 
-
-/* ESTILOS PRESENTACION */
+ul {
+  /* Reseteo listas */
+  list-style: none;
+}
 
 section {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-top: 5rem;
+}
+
+section ul {
+  width:100%;
+}
+
+h2 {
+  margin-bottom: 2rem;
   text-align: center;
 }
 
-#perfil h2 {
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* ESTILOS EXPERIENCIA LABORAL */
+
+.exp-tic {
+  margin-bottom: 2rem;    
+}
+
+.empresa {
+  text-transform: uppercase;
+}
+
+.exp-tic ul li ul {
+  margin-left: 2rem;
+}
+
+.exp-tic ul li ul li p {
+  font-size: .8rem;
+}
+
+.primera-linea {
+  width: 100%;
+  display: inline-flex;
+  justify-content: space-between;
+  font-weight: 700;
+  border-bottom: 1px solid #252525;
+  margin-bottom: .3rem;
+}
+
+.exp-no-tic ul li{
+  margin-bottom: 1.5rem;
+}
+
+/* ESTILOS EDUCACION ACADÉMICA */
+#educacion ul li {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
   margin-bottom: 2rem;
+}
+
+#educacion ul li p:first-child {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  border-bottom: 1px solid #252525;
+  margin-bottom: .3rem;
+}
+
+#educacion ul li p:last-child {
+  text-transform: uppercase;
+}
+
+/* ESTILOS SKILLS */
+
+.skills-container{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.skills-container div h3 {
+  font-size: 1.5rem;
+}
+
+.skills-container div ul {
+  text-align: center;
+}
+
+.skills-container div ul li {
+  margin-bottom: .3rem;
+}
+
+.skills-container div ul li::after {
+  content: "☑️";
+  margin-left: .3rem;
+  font-size: 1.2rem;
+}
+
+/* ESTILOS PROYECTOS */
+
+.proyectos-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 5rem;
+}
+
+.proyectos-container div a {
+  color: rgb(67, 67, 67);
+  text-decoration: none;
+}
+
+.proyectos-container div a:hover {
+  color: rgb(50, 50, 50);
+  text-decoration: underline;
+}
+
+/* ESTILOS CONTACTO */
+
+#contacto {
+  text-align: center;
+}
+
+.contacto-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contacto-container a {
+  width: 10rem;
+  height: 4rem;
+  text-decoration: none;
+  color: rgb(225, 225, 225);
+  background: linear-gradient(to right, #252525,#626262, #252525);
+  background-size: 180%;
+  background-position: right;
+  padding: .8rem;
+  border-radius: 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  transition: background-position .3s ease-in-out;
+}
+
+.contacto-container a svg {
+  width: 2rem;
+  height: 2rem;
+  fill: rgb(225, 225, 225);
+}
+
+.contacto-container a:hover {
+  background-position: left;
 }
 
 
